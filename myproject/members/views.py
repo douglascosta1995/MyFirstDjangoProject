@@ -32,3 +32,11 @@ def delete(request, id):
     member = Members.objects.get(id=id)
     member.delete()
     return HttpResponseRedirect(reverse('index'))
+
+def update(request, id):
+    mymember = Members.objects.get(id=id)
+    template = loader.get_template('update.html')
+    context = {
+        'mymember': mymember,
+    }
+    return HttpResponse(template.render(context, request))
