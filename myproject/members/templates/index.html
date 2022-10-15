@@ -8,7 +8,8 @@
 <link rel="stylesheet" href="{% static 'layout.css' %}">
 <body>
 <h1>Members</h1>
-<table border="1">
+<div class="top-container">
+  <table border="1" style="margin-left:auto;margin-right:auto;background-color:#EAF6F6">
     {% for x in my_members%}
     <tr>
         <td>
@@ -28,6 +29,7 @@
     </tr>
     {% endfor %}
 </table>
+</div>
 <p>
     <a href="add/">Add a member</a>
 </p>
